@@ -1,6 +1,6 @@
 var obj;
 var obst = [];
-var ghosts = [0, 20, 50, 80];
+var ghosts = [5, 20, 50, 80];
 var g;
 var k;
 var collect;
@@ -17,8 +17,8 @@ function setup() {
   colorMode(HSB)
   createCanvas(600, 900);
   obj = new OBJ(width / 2, height / 3, 255);
-  obst[0] = new OBJ(width / 5, height / 13, 0);
-  obst[0].walker();
+  // obst[0] = new OBJ(width / 5, height / 13, 0);
+  // obst[0].walker();
   g = 0.2;
   k = 0.01;
   collect = new Collects();
@@ -40,9 +40,9 @@ function reset() {
   background(80);
   obj.reset(width / 2, height / 5, 255);
   obst = [];
-  obst.push(new OBJ(width / 5, height / 13, 0));
-  obst[0].walker();
-  obst[0].render();
+  // obst.push(new OBJ(width / 5, height / 13, 0));
+  // obst[0].walker();
+  // obst[0].render();
   collect.update();
   bonusCounter = 0;
   bonus.update();
@@ -171,7 +171,7 @@ function clicking() {
 
 
 function catcha(_obst) {
-  if (dist(obj.pos.x, obj.pos.y, _obst.pos.x, _obst.pos.y) < 20) {
+  if (dist(obj.pos.x, obj.pos.y, _obst.pos.x, _obst.pos.y) < 28) {
     obj.gameOver(score);
   }
 }
