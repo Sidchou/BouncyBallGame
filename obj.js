@@ -38,7 +38,7 @@ class OBJ {
   render() {
     push();
     fill(this.c);
-    ellipse(this.pos.x, this.pos.y, 20, 20);
+    ellipse(this.pos.x, this.pos.y, 30, 30);
     pop();
   }
 
@@ -63,10 +63,10 @@ class OBJ {
     fill(255);
     textSize(40);
     textAlign(CENTER);
-    text("score: " + s, width / 2, height / 3 - 40);
-    text("GAME OVER", width / 2, height / 3);
+    text("score: " + s, width / 2, height * 2 / 3 - 40);
+    text("GAME OVER", width / 2, height * 2 / 3);
     fill("#f00000");
-    text("restart?", width / 2, height / 3 + 40);
+    text("restart?", width / 2, height * 2 / 3 + 40);
     pop();
     noLoop();
     document.querySelector("canvas").addEventListener("click", reset);

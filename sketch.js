@@ -132,7 +132,7 @@ function draw() {
     push();
     textSize(50);
     textAlign(CENTER);
-    text("start", width / 2, height / 3);
+    text("start", width / 2, height * 2 / 3);
     pop();
     noLoop();
   }

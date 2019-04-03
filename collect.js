@@ -7,7 +7,7 @@ class Collects {
 
   collide(obj) {
     let m = obj.pos;
-    return dist(m.x, m.y, this.x, this.y) < 14
+    return dist(m.x, m.y, this.x, this.y) < 25
   }
 
   update() {
@@ -19,13 +19,13 @@ class Collects {
   render() {
     push();
     fill(this.c);
-    ellipse(this.x, this.y, 10, 10);
+    ellipse(this.x, this.y, 20);
     pop();
   }
   renderBonus(a) {
     push();
     fill(random(50, 60), random(65, 70), 95);
-    polygon(this.x, this.y, 5, 10, a, true);
+    polygon(this.x, this.y, 15, 10, a, true);
     pop();
   }
 }
