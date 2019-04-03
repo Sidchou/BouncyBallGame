@@ -16,7 +16,7 @@ function setup() {
   fill(255)
   colorMode(HSB)
   createCanvas(600, 900);
-  obj = new OBJ(width / 2, height / 5, 255);
+  obj = new OBJ(width / 2, height / 3, 255);
   obst[0] = new OBJ(width / 5, height / 13, 0);
   obst[0].walker();
   g = 0.2;
@@ -146,7 +146,7 @@ function mousePressed() {
   let cur = createVector(mouseX, mouseY);
   mouseClick.push(cur.copy());
 
-  cur.sub(obj.pos).normalize().mult(-250);
+  cur.sub(obj.pos).normalize().mult(-500);
   obj.applyForce(cur);
   // moves--}
   mouseClickColor.push(60);
