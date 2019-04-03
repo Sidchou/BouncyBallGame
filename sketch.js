@@ -1,6 +1,6 @@
 var obj;
 var obst = [];
-var ghosts = [5, 20, 50, 80];
+var ghosts = [4, 19, 49, 79];
 var g;
 var k;
 var collect;
@@ -95,7 +95,7 @@ function draw() {
       bonusCounter++;
     }
     if (bonusCounter < 300 && bonusCounter > 0) {
-      bonus.renderBonus(bonusCounter / 100);
+      bonus.renderBonus(bonusCounter / 200);
       bonusCounter++;
       if (bonus.collide(obj)) {
         score += 5;
