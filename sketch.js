@@ -95,7 +95,7 @@ function draw() {
       bonusCounter++;
     }
     if (bonusCounter < 300 && bonusCounter > 0) {
-      bonus.renderBonus(bonusCounter / 200);
+      bonus.renderBonus(bonusCounter / 100);
       bonusCounter++;
       if (bonus.collide(obj)) {
         score += 5;

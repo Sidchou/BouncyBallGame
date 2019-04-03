@@ -25,7 +25,7 @@ class Collects {
   renderBonus(a) {
     push();
     fill(random(50, 60), random(65, 70), 95);
-    polygon(this.x, this.y, 15, 10, a, true);
+    polygon(this.x, this.y, 5, 10, a, true);
     pop();
   }
 }
