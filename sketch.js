@@ -15,7 +15,7 @@ let mouseClickColor=[];
 function setup() {
   fill(255)
   colorMode(HSB)
-  createCanvas(400, 800);
+  createCanvas(600, 900);
   obj = new OBJ(width / 2, height / 5, 255);
   obst[0] = new OBJ(width / 5, height / 13, 0);
   obst[0].walker();
@@ -146,10 +146,10 @@ function mousePressed() {
   let cur = createVector(mouseX, mouseY);
   mouseClick.push(cur.copy());
 
-  cur.sub(obj.pos).normalize().mult(-100);
+  cur.sub(obj.pos).normalize().mult(-250);
   obj.applyForce(cur);
   // moves--}
-  mouseClickColor.push(80);
+  mouseClickColor.push(60);
   // mouseClick.push(cur);
 
 
@@ -158,7 +158,7 @@ function mousePressed() {
 function clicking() {
   for (let i = 0; i < mouseClickColor.length; i++) {
     push();
-    fill(0, 80, 95, mouseClickColor[i]/150);
+    fill(0, 80, 95, mouseClickColor[i]/200);
     ellipse(mouseClick[i].x, mouseClick[i].y, 2 * mouseClickColor[i]);
     pop();
     mouseClickColor[i] -= 3;
