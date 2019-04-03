@@ -146,7 +146,7 @@ function mousePressed() {
   let cur = createVector(mouseX, mouseY);
   mouseClick.push(cur.copy());
 
-  cur.sub(obj.pos).normalize().mult(-25);
+  cur.sub(obj.pos).normalize().mult(-40);
   obj.applyForce(cur);
   // moves--}
   mouseClickColor.push(60);
