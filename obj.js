@@ -45,13 +45,13 @@ class OBJ {
   edge(s) {
     if (this.pos.x > width - 10) {
       this.pos.x = width - 10;
-      this.v.x *= -1;
+      this.v.x *= -0.95;
     } else if (this.pos.x < 10) {
-      this.v.x *= -1;
+      this.v.x *= -0.95;
       this.pos.x = 10;
     }
     if (this.pos.y < 10) {
-      this.v.y *= -1;
+      this.v.y *= -0.85;
       this.pos.y = 10;
     } else if (this.pos.y > height + 10) {
       this.gameOver(s);

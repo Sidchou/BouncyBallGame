@@ -20,7 +20,7 @@ function setup() {
   // obst[0] = new OBJ(width / 5, height / 13, 0);
   // obst[0].walker();
   g = 0.2;
-  k = 0.01;
+  k = 0.02;
   collect = new Collects();
   bonus = new Collects();
   bonusCounter = 0;
@@ -31,6 +31,7 @@ function setup() {
 
 function startGame() {
   start = true;
+  obj.v = createVector(0,0);
   loop();
   document.querySelector("canvas").removeEventListener("click", startGame);
 }
@@ -52,7 +53,6 @@ function reset() {
   start = false;
   collect.render();
   obj.render();
-  obj.edge();
   mouseClick = []
   mouseClickColor = []
   document.querySelector("canvas").removeEventListener("click", reset);
